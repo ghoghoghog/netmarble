@@ -16,7 +16,7 @@ public class bullet: MonoBehaviour
     void Update()
     {
         currtime += Time.deltaTime;
-        if (currtime > 1)
+        if (currtime > 0.8)
         {
             // x,y,z 좌표값을 각각 다른 범위에서 랜덤하게 정해지도록 만들었다.
             float newX = Random.Range(-11f, 11f);
@@ -25,5 +25,9 @@ public class bullet: MonoBehaviour
             currtime = 0;
         }
         bulletobj.transform.Translate(Vector3.down * 300f);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(obj: gameObject);
     }
 }
