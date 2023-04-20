@@ -8,8 +8,8 @@ public class HP : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI hp;
     private float currenthp = 3;
-    [SerializeField]
-    private TextMeshProUGUI score;
+
+    public TextMeshProUGUI score;
     
     private float currentValue = 0f;
     public float increaseAmountPerSecond = 10f;
@@ -20,8 +20,14 @@ public class HP : MonoBehaviour
         {
             currenthp -= 1;
         }
-
-
+        if (collision.gameObject.CompareTag("heart"))
+        {
+            currenthp += 1;
+        }
+        if(currenthp > 3)
+        {
+            currenthp = 3;
+        }
     }
   
     

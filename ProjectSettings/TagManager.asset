@@ -6,6 +6,7 @@ TagManager:
   tags:
   - player
   - bullet
+  - heart
   layers:
   - Default
   - TransparentFX

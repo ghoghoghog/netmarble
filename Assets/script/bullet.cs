@@ -16,9 +16,11 @@ public class bullet: MonoBehaviour
     void Update()
     {
         currtime += Time.deltaTime;
+        
+       
         if (currtime > 0.8)
         {
-            // x,y,z ÁÂÇ¥°ªÀ» °¢°¢ ´Ù¸¥ ¹üÀ§¿¡¼­ ·£´ıÇÏ°Ô Á¤ÇØÁöµµ·Ï ¸¸µé¾ú´Ù.
+            // x,y,z ì¢Œí‘œê°’ì„ ê°ê° ë‹¤ë¥¸ ë²”ìœ„ì—ì„œ ëœë¤í•˜ê²Œ ì •í•´ì§€ë„ë¡ ë§Œë“¤ì—ˆë‹¤.
             float newX = Random.Range(-11f, 11f);
             GameObject bullet = Instantiate(bulletobj);
             bullet.transform.position = new Vector3(newX, 11, 0);
