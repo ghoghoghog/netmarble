@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class HP : MonoBehaviour
 {
+    public string sceneName;
     [SerializeField]
     private TextMeshProUGUI hp;
     private float currenthp = 3;
@@ -40,7 +41,8 @@ public class HP : MonoBehaviour
         hp.text = "HP: " + currenthp.ToString();
         if (currenthp == 0)
         {
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
+            SceneManager.LoadScene((sceneName));
         }
 
 

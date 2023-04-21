@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5ed0f60f6b02d44a4378075ef47fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: gameover
   hp: {fileID: 1552435243}
   score: {fileID: 1564598848}
   increaseAmountPerSecond: 10

@@ -9,9 +9,9 @@ public class bulletright : MonoBehaviour
     void Update()
     {
         currtime += Time.deltaTime;
-        if (currtime > 7)
+        if (currtime > 5)
         {
-            // x,y,z ÁÂÇ¥°ªÀ» °¢°¢ ´Ù¸¥ ¹üÀ§¿¡¼­ ·£´ýÇÏ°Ô Á¤ÇØÁöµµ·Ï ¸¸µé¾ú´Ù.
+            // x,y,z ï¿½ï¿½Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
             float newY = Random.Range(-11f, 11f);
             GameObject bullet = Instantiate(bulletobj);
             bullet.transform.position = new Vector3(-17, newY , 0);
