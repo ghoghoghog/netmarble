@@ -6,7 +6,7 @@ public class squareight : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    // Start is called before the first frame update
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,7 +17,7 @@ public class squareight : MonoBehaviour
         
         rb.AddForce(new Vector2(2f, 0));
     }
-        // Update is called once per frame
+        
         
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +25,10 @@ public class squareight : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        if (collision.gameObject.CompareTag("box"))
+        {
+            Destroy(gameObject);
+        }
 
     }
 }

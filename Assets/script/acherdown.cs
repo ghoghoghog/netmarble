@@ -15,8 +15,11 @@ public class acherdown : MonoBehaviour
             {
                 Destroy(obj: gameObject);
             }
-
-
+        if (collision.gameObject.CompareTag("box"))
+        {
+            Destroy(gameObject);
         }
+
+    }
     
 }

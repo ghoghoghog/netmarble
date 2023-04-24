@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8566495733040501903}
   m_Layer: 0
   m_Name: upcircle
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -23,8 +23,11 @@ public class circleup: MonoBehaviour {
         {
             Destroy( gameObject);
         }
-        
-        
+        if (collision.gameObject.CompareTag("box"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 

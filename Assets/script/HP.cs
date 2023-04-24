@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class HP : MonoBehaviour
 {
-    public string sceneName;
+    
     [SerializeField]
     private TextMeshProUGUI hp;
     private float currenthp = 3;
+    [SerializeField]
+    private TextMeshProUGUI text;
 
-    public TextMeshProUGUI score;
-    
-    private float currentValue = 0f;
-    public float increaseAmountPerSecond = 10f;
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,14 +37,13 @@ public class HP : MonoBehaviour
     
     private void Update()
     {
-        currentValue += increaseAmountPerSecond * Time.deltaTime;
-        score.text = currentValue.ToString("F0");
+        
 
         hp.text = "HP: " + currenthp.ToString();
         if (currenthp == 0)
         {
-            //Time.timeScale = 0f;
-            SceneManager.LoadScene((sceneName));
+            Time.timeScale = 0f;
+            
         }
 
 
@@ -50,8 +51,7 @@ public class HP : MonoBehaviour
 
 
     }
-
-
+    
 
 
 
